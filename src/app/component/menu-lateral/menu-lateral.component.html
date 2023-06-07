@@ -1,0 +1,57 @@
+
+<nav class="menu">
+
+  <ul>
+    <li class="item-menu">
+      <a href="blog/home">
+        <span class="icon"> <i class="bi bi-house-door"></i> </span>
+        <span class="txt-link">HOME</span>
+      </a>
+    </li>
+    <li class="item-menu">
+      <a href="blog/perfil">
+        <span class="icon"><i class="bi bi-person-square"></i></span>
+        <span class="txt-link">PROFILE</span>
+      </a>
+    </li>
+    <li class="item-menu">
+      <a href="blog/interna">
+        <span class="icon"><i class="bi bi-chat-square-quote"></i></span>
+        <span class="txt-link">POST's</span>
+      </a>
+    </li>
+
+    <li class="item-menu">
+      <a href="blog/criar">
+        <span class="icon"><i class="bi bi-bookmark-plus"></i></span>
+        <span class="txt-link">NEW</span>
+      </a>
+    </li>
+
+  </ul>
+</nav>
+
+
+
+
+<!--
+  Criem um json para o blog onde terá 2 rotas
+  Uma rota para postagem com as propriedades:
+  titulo - string
+  data -  string ( yyyy/MM/dd : hh:mm )
+  texto - string
+  imagem - string ( url ou caminho )
+  autor - number ( idDoAutor )
+  comentarios -  [ texto - string, autor - number, curtidas - number, data -  string ]
+  id - number
+  Uma rota para guardar os usuários (autores)
+  username - string
+  pfp - string ( url ou caminho )
+  resumo - string
+  postagens - [ numbers ] ( id das postagens do usuário )
+  id - number
+
+  Home da blog precisa mostrar todos as postagens com título, data e nome do autor
+  Interna da blog mostra a postagens com todas as infomações, no final os comentários e um campo para comentar
+
+ -->

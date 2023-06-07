@@ -1,0 +1,34 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nomeProduto": "Celular",
+      "precoProduto": 3000,
+      "estoqueProduto": 100
+    },
+    {
+      "id": 2,
+      "nomeProduto": "Notebook",
+      "precoProduto": 3500,
+      "estoqueProduto": 150
+    },
+    {
+      "id": 3,
+      "nomeProduto": "TV",
+      "precoProduto": 4500,
+      "estoqueProduto": 99
+    },
+    {
+      "id": 4,
+      "nomeProduto": "Geladeira",
+      "precoProduto": 3000,
+      "estoqueProduto": 89
+    },
+    {
+      "id": 5,
+      "nomeProduto": "IPHONE 14 PRO MAX",
+      "precoProduto": 8000,
+      "estoqueProduto": 23
+    }
+  ]
+}

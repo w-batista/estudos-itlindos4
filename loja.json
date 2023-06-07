@@ -1,0 +1,59 @@
+{
+  "produtos": [
+    {
+      "nome": "JOGO RODAS GM OMEGA / VECTRA TSW NURBURGRING ARO 17 5X110 PRETO SEMI BRILHO",
+      "preco": 3550,
+      "estoque": 35,
+      "departamento": 1,
+      "descricao": "FURAÇÃO: 5x110  ARO: 17",
+      "imagem": "https://images.tcdn.com.br/img/img_prod/1002931/jogo_rodas_gm_omega_vectra_tsw_nurburgring_aro_17_5x110_preto_semi_brilho_34794265_1_479fe7eff90efe40db3a38909f3f5154.jpg",
+      "id": 1
+    },
+    {
+      "nome": "Lampadas Led Vectra 1996 A 2011 Efeito Xenon + Pingo T10",
+      "preco": 379.9,
+      "estoque": 98,
+      "departamento": 1,
+      "descricao": "Kit Lampadas Super Led Vectra 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 Efeito Xenon Super Branca",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_845241-MLB69151189226_042023-F.webp",
+      "id": 2
+    },
+    {
+      "nome": "Pelicula Insulfilm 7m X 75cm G5, g20 Ou G35 + Brinde",
+      "preco": 73.1,
+      "estoque": 55,
+      "departamento": 1,
+      "descricao": "Aumenta o conforto, Melhora a Seguranca e Privacidade, Proteje o Interior do Veiculo Contra os Raios Solares, Aumenta a Eficiencia do Ar Condicionado, Melhora a Aparencia do Seu Carro.",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_733263-MLB46994151186_082021-F.webp",
+      "id": 3
+    },
+    {
+      "nome": "Jaqueta Alpinestars Andes Pro Drystar Tech-Air Compatible Cinza Preto Vermelho M",
+      "preco": 3019.49,
+      "estoque": 13,
+      "departamento": 2,
+      "descricao": "A Jaqueta Alpinestars Andes Pro DRYSTAR® é uma jaqueta 100% impermeável compatível com Tech-Air® Street da Alpinestars. \n Sua construção tecnicamente avançada oferece proteção, resistência à abrasão e seu forro térmico removível possibilita o uso em todas as condições climáticas.",
+      "imagem": "https://motosprint.vteximg.com.br/arquivos/ids/172802-2400-2400/1.png?v=637558405896370000",
+      "id": 4
+    },
+    {
+      "nome": "Engate Vectra GT Hatch 2007 2008 2009 2010 2011 Rabicho Fixo 700kg",
+      "preco": 549.9,
+      "estoque": 20,
+      "departamento": 1,
+      "descricao": "Desenvolvido especialmente para o Vectra GT Hatch 2007 a 2011 e para quem procura um Engate de Reboque de alta resistência que não demonstre fraqueza ao utilizar no reboque ou tracionamento de carretas, trailers, etc.",
+      "imagem": "https://connectparts.vteximg.com.br/arquivos/ids/1779163-450-450/engate-fixo-vectra-gt-hatch-2007-a-2011-gm3054-connectparts--1-.jpg?v=637768308126100000",
+      "id": 5
+    }
+  ],
+  "departamentos": [
+    {
+      "departamento": "Automotivo",
+      "id": 1
+    },
+    {
+      "departamento": "Motos",
+      "id": 2
+    }
+  ]
+}

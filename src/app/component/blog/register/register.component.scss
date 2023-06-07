@@ -1,0 +1,80 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 150px;
+  margin-right: 50px;
+  padding: 50px 50px;
+  box-shadow: 10px 10px 10px 10px rgba(117, 210, 247, 0.505);
+}
+
+section .title {
+  font-family: 'high-speed';
+  color: rgb(224, 224, 224);
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+section .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // margin: 20px;
+}
+
+section .infos p {
+  font-family: 'high-speed';
+  color: rgb(224, 224, 224);
+  font-size: 25px;
+}
+
+section .infos input {
+  font-size: 20px;
+  font-family: 'high-speed';
+}
+
+input.invalid{
+  border: 3px solid red;
+}
+section textarea.invalid{
+  border: 3px solid red;
+
+}
+
+small{
+  color: white;
+  font-family: 'high-speed';
+  margin: 10px;
+}
+
+
+section .infos textarea {
+  font-size: 20px;
+  font-family: 'high-speed';
+}
+
+section .pfp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button {
+  text-decoration: none;
+  // color: rgb(224, 224, 224);
+  background-color: rgb(63, 145, 189);
+  // color: rgb(12, 12, 51);
+  font-family: 'high-speed';
+  margin: 40px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px 15px;
+}
+
+button:hover{
+  cursor: pointer;
+
+}

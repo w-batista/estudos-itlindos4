@@ -1,0 +1,130 @@
+
+ h1{
+
+  font-size: 50px;
+  font-family: 'high-speed';
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(224, 224, 224);
+
+
+}
+
+ .box-geral{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  box-shadow: 0 0 10px 15px rgba(12, 11, 11, 0.99);
+
+}
+
+.box-geral .imagemPerfil img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  height: 450px;
+  background-size: cover;
+
+  // border-radius: 100%;
+}
+
+.box-geral .box .user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(224, 224, 224);
+
+
+}
+
+.box-geral .box p{
+  color: white;
+  font-family: 'high-speed';
+  font-size: 25px;
+}
+
+.box-geral .box .resumo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-geral .box h3{
+  color: rgb(224, 224, 224);
+  font-family: 'high-speed';
+  font-size: 30px;
+}
+
+.box-geral-2{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+
+}
+
+.box-geral-2 .box-post{
+  display: flex;
+  flex-direction: column;
+}
+.box-geral-2 .box-post h2{
+  font-size: 20px;
+  font-family: 'high-speed';
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(224, 224, 224);
+
+}
+
+.box-geral-2 .box-btn{
+  display: flex;
+  flex-direction: row;
+}
+
+.box-geral-2 .box-post h3{
+  color: rgb(224, 224, 224);
+
+  font-family: 'high-speed';
+  font-size: 30px;
+}
+
+.box-geral-2 .box-post p{
+  color: white;
+  font-family: 'high-speed';
+  font-size: 20px;
+}
+
+
+.box-geral-2 .box-post .imagemBack img{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 400px;
+  box-shadow: 0 0 10px 20px rgba(12, 11, 11, 0.99);
+}
+
+.box-geral-2 .box-btn .btn-like{
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: 'high-speed';
+  border-radius: 10px;
+  border: none;
+}
+
+.box-geral-2 .box-btn .btn-like:hover{
+  cursor: pointer;
+}
+
+.box-btn p{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 15px;
+  font-family: 'high-speed';
+}
+
+
+

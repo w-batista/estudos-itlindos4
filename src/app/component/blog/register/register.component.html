@@ -1,0 +1,43 @@
+<section>
+
+  <div class="title">
+    <h3>Fast and Furious</h3>
+  </div>
+
+  <form [formGroup]="formPost">
+    <div class="infos">
+      <p>Crie um Usuário:</p>
+      <input type="text" class="username" placeholder="Username" formControlName="username"
+        [ngClass]="{'invalid': (formPost.controls['username'].status == 'INVALID' && formPost.controls['username'].touched)}" />
+      <small *ngIf="formPost.controls['username'].status == 'INVALID' && formPost.controls['username'].touched">Usuário
+        Inválido</small>
+
+      <p>
+        Crie uma senha:
+      </p>
+      <input type="password" class="password" placeholder="Password" formControlName="password"
+        [ngClass]="{ 'invalid': (formPost.controls['password'].status == 'INVALID' && formPost.controls['password'].touched)}" />
+      <small *ngIf="formPost.controls['password'].status == 'INVALID' && formPost.controls['password'].touched">Senha
+        Inválida</small>
+
+      <p>
+        Insira sua foto de perfil:
+      </p>
+      <input type="url" class="image" placeholder="Insira o link da imagem">
+
+
+      <p>Nos conte sobre você:</p>
+      <textarea class="resumo" cols="30" rows="10" placeholder="Resumo" formControlName="resumo"
+        [ngClass]="{'invalid': (formPost.controls['resumo'].status == 'INVALID' && formPost.controls['resumo'].touched)}"></textarea>
+      <small *ngIf="formPost.controls['resumo'].status == 'INVALID' && formPost.controls['resumo'].touched">Campo
+        preenchido incorretamente</small>
+    </div>
+  </form>
+
+  <div class="btn">
+    <button [disabled]="formPost.status === 'INVALID'" type="button" (click)="criarUser()" >
+      Finalizar
+    </button>
+  </div>
+
+</section>

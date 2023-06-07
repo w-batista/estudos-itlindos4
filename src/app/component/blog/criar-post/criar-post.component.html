@@ -1,0 +1,58 @@
+<section>
+
+  <h1>
+    Criar Post
+  </h1>
+
+  <div class="box">
+    <form [formGroup]="formPost">
+
+      <div class="contInput">
+        <label for="tituloInput">
+          <p>Titulo</p>
+        </label>
+        <input id="tituloInput" type="text" formControlName="titulo"
+          [ngClass]="{ 'invalid': (formPost.controls['titulo'].status == 'INVALID' && formPost.controls['titulo'].touched)}" />
+        <small *ngIf="formPost.controls['titulo'].status == 'INVALID' && formPost.controls['titulo'].touched">Campo
+          Inválido</small>
+      </div>
+      <div class="contInput">
+        <label for="tituloInput">
+          <p>ID do Autor</p>
+        </label>
+        <input id="IdInput" type="number" formControlName="id"
+          [ngClass]="{'invalid': (formPost.controls['id'].status == 'INVALID' && formPost.controls['id'].touched)}"/>
+        <small *ngIf="formPost.controls['id'].status == 'INVALID' && formPost.controls['id'].touched">Campo
+          Inválido</small>
+      </div>
+
+      <div class="contInput">
+        <label for="tituloInput">
+          <p>
+            Texto do Post
+          </p>
+        </label>
+        <textarea id="textInput" rows="20" formControlName="texto"
+          [ngClass]="{'invalid': (formPost.controls['texto'].status == 'INVALID' && formPost.controls['texto'].touched)}">
+      </textarea>
+        <small *ngIf="formPost.controls['texto'].status == 'INVALID' && formPost.controls['texto'].touched">Campo
+          Inválido</small>
+
+      </div>
+
+      <div class="contInput">
+        <label for="imagemInput">
+          <p>
+            URL da Imagem
+          </p>
+        </label>
+        <input type="text" formControlName="imagem">
+      </div>
+
+      <button [disabled]="formPost.status === 'INVALID'" type="button" (click)="criarPost()" class="btn">
+        Adicionar Post
+      </button>
+    </form>
+  </div>
+
+</section>

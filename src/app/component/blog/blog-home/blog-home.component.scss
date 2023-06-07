@@ -1,0 +1,96 @@
+
+section{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+section .btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+  background: rgb(63, 145, 189);
+  padding: 20px 30px 20px 30px;
+  gap: 10px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'high-speed';
+}
+
+section .btn:hover{
+  cursor: pointer;
+}
+
+h1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+  line-height: 105px;
+  font-size: 70px;
+  font-family: 'high-speed';
+  align-items: center;
+  color: rgb(224, 224, 224);
+  box-shadow: 0px 10px 10px 0px rgb(43, 182, 247);
+  text-decoration-line: underline;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.formsGroup{
+  width: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.classForms h2{
+  font-size: 30px;
+  color: rgb(202, 203, 204);
+  text-decoration: underline;
+}
+
+
+
+.formsGroup .classForms{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin: auto;
+  // line-height: 35px;
+  // font-size: 30px;
+  font-family: 'high-speed';
+  align-items: center;
+  box-shadow: 5px 5px 30px 5px rgb(43, 182, 247);
+
+
+}
+.formsGroup .imagem {
+  width: 70%;
+  height: 500px;
+  background-size: cover;
+  background-position: center top;
+}
+
+.box-sub{
+  color: rgb(195, 195, 197);
+}
+
+
+.formsGroup .classForms .box-sub .autor p:hover{
+  cursor: pointer;
+}
+
+
+

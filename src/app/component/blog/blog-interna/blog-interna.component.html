@@ -1,0 +1,73 @@
+<section>
+
+  <div class="box">
+    <h1> <i class="bi bi-camera-reels-fill"></i>
+      {{blog.titulo}}
+    </h1>
+    <img [src]="blog.imagem" alt="">
+    <div class="contCentro">
+
+      <h5> <i class="bi bi-calendar2-month-fill"></i>
+        Data: {{blog.data.split('T')[0].trim().split('-').reverse().join('/')}} -
+        {{blog.data.split('T')[1].split(':')[0]}}:{{blog.data.split('T')[1].split(':')[1]}}
+      </h5>
+      <h6 routerLink="/blog/perfil/{{blog.id}}">
+        <!-- <i class="bi bi-person-plus-fill"></i> -->
+        <p>Publicado por:</p>
+        <p>{{findAutor(blog.autor)}}</p>
+        <h4>
+          <i class="bi bi-bookmarks-fill"></i> {{blog.texto}}
+        </h4>
+      </h6>
+    </div>
+
+    <div class="like">
+      <button type="button" class="btn-like" (click)="likePubli()">
+        Curtir <i class="bi bi-hand-thumbs-up-fill"></i>
+      </button>
+      <p>
+        {{mostrarCurtidas()}}
+      </p>
+      <button type="button" class="btn-like" routerLink="/blog/home">
+        Home <i class="bi bi-house-door-fill"></i>
+      </button>
+    </div>
+  </div>
+
+  <form [formGroup]="formPost">
+    <div class="itemComentario">
+
+      <h2>
+        <i class="bi bi-chat-quote-fill"></i> Exibir os Comentários <i class="bi bi-caret-down-fill"></i>
+      </h2>
+
+      <div class="contComents" *ngFor="let coment of blog.comentarios">
+        <h6>
+          {{ findAutor(coment.autor) }}: <p>{{ coment.texto }}</p>
+        </h6>
+        <div class="box-btn">
+          <button type="button" class="btn-like" (click)="likePubli()">
+            Curtir <i class="bi bi-hand-thumbs-up-fill"></i>
+          </button>
+          <p>{{mostrarCurtidas()}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="comentarios">
+      <p>Deixe seu comentário:</p>
+      <textarea cols="20" rows="20" formControlName="texto"
+        [ngClass]="{'invalid': (formPost.controls['texto'].status == 'INVALID' && formPost.controls['texto'].touched)}">
+      </textarea>
+      <small *ngIf="formPost.controls['texto'].status == 'INVALID' && formPost.controls['texto'].touched">Campo
+        Inválido</small>
+      <button [disabled]="formPost.status === 'INVALID'" type="button" class="btn" (click)="editarComentario()">
+        Comentar
+      </button>
+    </div>
+
+  </form>
+
+
+
+</section>

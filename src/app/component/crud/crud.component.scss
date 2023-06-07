@@ -1,0 +1,115 @@
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 80%;
+  border: 1px solid #ddd;
+  margin-left: 20%;
+  font-size: 20px;
+
+}
+
+th, td{
+  text-align: left;
+  padding: 20px;
+  font-family: 'arial';
+
+}
+
+tbody tr:nth-child(odd){
+  background-color: #f2f2f2;
+}
+
+
+.classForms{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  // background-color: green;
+}
+
+.contInputs{
+  display: flex;
+  font-family: 'arial';
+  justify-content: center;
+  max-height: 35px;
+
+}
+.contInputs input{
+  width: 300px;
+}
+
+.btn-insere{
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: lightblue;
+  font-family: 'arial';
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+
+
+}
+
+.btn-edit{
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(172, 172, 74);
+  font-family: 'arial';
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+
+}
+
+.btn-delete{
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(235, 182, 182);
+  font-family: 'arial';
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+
+}
+
+h2{
+  font-family: 'arial';
+  font-weight: 700;
+  margin: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+.contInputs label{
+  width: 180px;
+  word-wrap: break-word;
+}
+
+.contInputs .name{
+
+  font-family: 'arial';
+  font-weight: 700;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.contInputs .preco{
+  font-family: 'arial';
+  font-weight: 700;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.contInputs .estoque{
+
+  font-family: 'arial';
+  font-weight: 700;
+  margin: 10px;
+  font-size: 18px;
+}
+

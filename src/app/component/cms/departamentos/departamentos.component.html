@@ -1,0 +1,36 @@
+<section class="cont">
+  <h1>
+    Departamentos
+  </h1>
+  <button class="btn-insere" (click)="criarDepto()">Novo Departamento</button>
+  <app-lista
+    [cols]="cols"
+    [dados]="departamentos"
+    (onDelete)="onDeleteDep($event)"
+    (onEdit)="onEditDep($event)"
+    ></app-lista>
+</section>
+
+<ng-container *ngIf="open == true">
+  <form action="" [formGroup]="formDepto">
+    <section id="modal">
+      <div class="containerModal">
+        <div class="txt">
+          <h3>
+            Departamento
+          </h3>
+          <span class="close" (click)="closeModal()">&times;</span>
+        </div>
+        <div class="caixa">
+          <input type="text" formControlName="departament" placeholder="Digite o departamento"
+            [ngClass]="{'invalid': (formDepto.controls['departament'].status == 'INVALID' && formDepto.controls['departament'].touched)}">
+          <small style="color: red" *ngIf="formDepto.status === 'INVALID'">Campo Inválido</small>
+          <div class="btns">
+            <button *ngIf="isEdit" class="btn-edit" (click)="editaDepartamento()">Atualizar</button>
+            <button *ngIf="!isEdit" class="btn-insere" (click)="salvarDepartamento()">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+</ng-container>

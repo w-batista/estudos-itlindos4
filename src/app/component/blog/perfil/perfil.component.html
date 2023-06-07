@@ -1,0 +1,58 @@
+<section>
+
+  <h1>
+    <i class="bi bi-person-fill-check"></i>
+    Perfil do Autor
+  </h1>
+
+  <div class="box-geral">
+
+    <div class="imagemPerfil">
+      <img [src]="user.pfp" alt="Foto de perfil">
+    </div>
+
+    <div class="box">
+
+      <div class="user">
+        <h3>Username:</h3>
+        <p>{{user.username}}</p>
+      </div>
+
+      <div class="resumo">
+        <h3>Resumo do Autor:</h3>
+        <p>{{user.resumo}}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="box-geral-2">
+
+    <div class="box-post">
+      <ng-container *ngFor="let pub of blog">
+        <!-- <div  routerLink="blog/interna/{{postagens.idDoAutor}}"> -->
+          <h2 routerLink="/blog/interna/{{pub.id}}"><i class="bi bi-camera-reels-fill"></i> {{pub.titulo}}</h2>
+        </ng-container>
+        <h3 *ngIf="user.postagens.length == 0">Sem postagens disponíveis </h3>
+    </div>
+
+
+    <div class="box-btn">
+      <button type="button" class="btn-like" (click)="likePubli()">
+        Curtir <i class="bi bi-hand-thumbs-up-fill"></i>
+      </button>
+      <p>
+        {{mostrarCurtidas()}}
+      </p>
+      <button type="button" class="btn-like" routerLink="/blog/home">
+        Home <i class="bi bi-house-door-fill"></i>
+      </button>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- *ngFor="let post of user.postagens" -->

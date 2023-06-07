@@ -1,0 +1,176 @@
+{
+  "blog": [
+    {
+      "titulo": "Velozes e Furiosos 10",
+      "data": "2023-05-12T17:16:13.729Z",
+      "texto": "Décimo filme da saga Velozes e Furiosos, Dom Toretto e sua família devem lidar com o adversário mais letal que já enfrentaram. Alimentada pela vingança, uma ameaça terrível emerge das sombras do passado para destruir o mundo de Dom e todos que ele ama.",
+      "imagem": "https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/03/17/1893794424-af8c2cc4d6350c5720b855eb05dcd6b8.jpg",
+      "autor": 1,
+      "comentarios": [
+        {
+          "texto": "ESSE FILME É MUITO BOM, ASSISTAM",
+          "autor": 1,
+          "curtidas": 3,
+          "data": "2023-05-12T19 - 14:02.686Z",
+          "id": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "titulo": "Velozes e Furiosos 9",
+      "data": "2023-05-12T17:16:13.729Z",
+      "texto": "Dominic Toretto e Letty vivem uma vida pacata ao lado do filho. Mas eles logo são ameaçados pelo passado de Dom: seu irmão desaparecido Jakob, que retorna e está trabalhando ao lado de Cipher. Cabe a Dom reunir a equipe novamente para enfrentá-los.",
+      "imagem": "https://media.moneytimes.com.br/uploads/2022/12/1-8.jpg",
+      "autor": 2,
+      "comentarios": [
+        {
+          "texto": "TEEEEEEEEEEESSSSTEEEEEEE",
+          "autor": 2,
+          "curtidas": 6,
+          "data": "2023-05-16T14:42:16.389Z",
+          "id": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "titulo": "Velozes e Furiosos 8",
+      "data": "2023-05-12T17:16:13.729Z",
+      "texto": "Depois da aposentadoria de Brian e Mia, Dom e Letty aproveitam a lua de mel e levam uma vida pacata e normal. Mas a adrenalina do passado volta com tudo quando uma mulher misteriosa obriga Dom a retornar ao mundo do crime e da velocidade.",
+      "imagem": "https://www.einerd.com.br/wp-content/uploads/2017/04/velozes8intro2-1.2.jpg",
+      "autor": 1,
+      "comentarios": [
+        {
+          "texto": "",
+          "autor": 1,
+          "curtidas": 0,
+          "data": "2023-05-12T19 - 14:02.686Z",
+          "id": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "titulo": "Velozes e Furiosos 7",
+      "texto": "Um agente do governo oferece ajuda para cuidar de Shaw em troca de Dom e o grupo resgatar um 'hacker' sequestrado. Dessa vez, não se trata apenas de velocidade: a corrida é pela sobrevivência.",
+      "imagem": "https://disneyplusbrasil.com.br/wp-content/uploads/2022/07/Velozes-Furiosos-7-Star-Plus.jpg",
+      "autor": 2,
+      "comentarios": [],
+      "id": 4,
+      "data": "2023-05-12T19:40:25.606Z"
+    },
+    {
+      "titulo": "Velozes e Furiosos 6",
+      "texto": "Desde que o golpe de Dom e Brian no Rio de Janeiro deixou o grupo com 100 milhões de dólares, a equipe se espalhou pelo mundo. Um dia, Hobbs pede a Dom que reúna um grupo de elite em Londres e apreenda uma organização de mercenários nas ruas, cujo mentor é apoiado por Letty, a antiga namorada de Dom que ele acreditava estar morta.",
+      "imagem": "https://www.cineset.com.br/wp-content/uploads/2014/08/MRODFAST6BR.jpg",
+      "autor": 1,
+      "comentarios": [
+        {
+          "texto": "hhhhhkkkkkkkkkkkkkkkkkkkkkkkkkk",
+          "autor": 2,
+          "curtidas": 0,
+          "id": 0,
+          "data": "2023-05-24T23:46:16.739Z"
+        }
+      ],
+      "id": 5,
+      "data": "2023-05-12T19:40:25.606Z"
+    },
+    {
+      "titulo": "Velozes e Furiosos 5: Operação Rio",
+      "texto": "Desde que o ex-policial Brian O'Conner e Mia Toretto libertaram Dom da prisão, eles viajam pelo mundo para fugir das autoridades. No Rio de Janeiro, eles são obrigados a fazer um último trabalho antes de ganhar sua liberdade definitiva. Brian e Dom montam uma equipe de elite de pilotos de carro para executar a tarefa, mas precisam enfrentar um empresário corrupto e também um obstinado agente federal norte-americano.",
+      "imagem": "https://images.amcnetworks.com/amctv.com.br/wp-content/uploads/2017/05/FAST5PK01_D013_00248.jpg",
+      "autor": 2,
+      "comentarios": [],
+      "id": 6,
+      "data": "2023-05-12T19:40:25.606Z"
+    },
+    {
+      "titulo": "Velozes e Furiosos 4",
+      "texto": "Dominic Toretto descobre que sua amada Letty foi assassinada e resolve procurar pelo autor do crime. Enquanto isso, o agente Brian O'Conner está em busca de um traficante de drogas. Eles percebem que talvez estejam atrás da mesma pessoa.",
+      "imagem": "https://www.justwatch.com/images/backdrop/200735139/s640/velozes-e-furiosos-4",
+      "autor": 1,
+      "comentarios": [],
+      "id": 7,
+      "data": "2023-05-12T19:40:25.606Z"
+    },
+    {
+      "titulo": "Velozes e Furiosos: Desafio em Tóquio",
+      "texto": "Sean Boswell é um piloto de rua que desafia seu rival e bate o carro no fim da corrida. Então, Sean decide se mudar para o Japão em companhia de seu pai para evitar a prisão nos Estados Unidos, já que os rachas não são nada populares com as autoridades. Em Tóquio, ele começa a aprender um excitante e perigoso estilo novo de competir nas ruas. Só que os riscos ficam ainda mais altos quando Sean decide competir com o campeão local e acaba se apaixonando pela namorada dele.",
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfl7CdBZ60wYYwbRSVMeDkmtPuavnICBKffA&usqp=CAU",
+      "autor": 2,
+      "comentarios": [],
+      "id": 8,
+      "data": "2023-05-12T19:40:25.606Z"
+    },
+    {
+      "titulo": "+ Velozes + Furiosos",
+      "texto": "O ex-policial Brian O'Conner se muda de Los Angeles para Miami para recomeçar sua vida. Ele acaba se envolvendo em rachas na sua nova cidade com seu amigo Tej e Suki. Suas aventuras terminam quando ele é preso e faz um acordo com agentes do FBI. Brian tem a missão muito perigosa de prender um poderoso chefe do cartel das drogas.",
+      "imagem": "https://s.aficionados.com.br/imagens/captura-de-ecra-2020-06-02-a-s-12-00-32_cke.jpg",
+      "autor": 1,
+      "comentarios": [],
+      "id": 9,
+      "data": "2023-05-12T19:40:25.606Z"
+    },
+    {
+      "titulo": "Velozes e Furiosos",
+      "texto": "Brian O'Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos. Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.",
+      "imagem": "https://i.pinimg.com/originals/4b/67/c9/4b67c9832898a101efb7a381dbb63457.jpg",
+      "autor": 2,
+      "comentarios": [
+        {
+          "texto": "Melhor filme da saga, ponta pé inicial, sem palavras!!! ",
+          "autor": 2,
+          "curtidas": 0,
+          "id": 0,
+          "data": "2023-05-24T16:13:56.029Z"
+        }
+      ],
+      "id": 10,
+      "data": "2023-05-12T19:40:25.606Z"
+    }
+  ],
+  "usuarios": [
+    {
+      "username": "Brian O'Conner",
+      "pfp": "https://i0.wp.com/velozesclub.com.br/wp-content/uploads/2022/09/29.jpg?resize=1000%2C600&ssl=1",
+      "resumo": "Dono do asfalto, dono do drift, principe das ruas!! MELHOR DO MUNDO, RESPEITA O HOMI",
+      "postagens": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "id": 1
+    },
+    {
+      "username": "Dominic Toretto",
+      "pfp": "https://ovicio.com.br/wp-content/uploads/2022/12/20221227-vin-diesel-teases-that-fast-and-furious-10-could-be-split-into-two-parts-social-555x555.jpg",
+      "resumo": "Dono do asfalto, dono do drift, rei das ruas!! RESPEITA O HOMI",
+      "postagens": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "id": 2
+    },
+    {
+      "username": "Roman Pierce",
+      "pfp": "",
+      "resumo": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "postagens": [],
+      "id": 3
+    },
+    {
+      "username": "kkkkkkkkkkkkkkkk",
+      "pfp": "",
+      "resumo": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "postagens": [],
+      "id": 4
+    }
+  ]
+}

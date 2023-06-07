@@ -1,0 +1,97 @@
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 150px;
+  margin-right: 50px;
+  padding: 50px 50px;
+  box-shadow: 20px 20px 10px 20px rgba(2, 2, 2, 0.505);
+
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title h3 {
+  font-family: 'high-speed';
+  color: rgb(224, 224, 224);
+
+  // color: rgb(12, 12, 51);
+  font-size: 40px;
+}
+
+.title h4 {
+  font-family: 'high-speed';
+  color: rgb(224, 224, 224);
+  // color: rgb(12, 12, 51);
+
+}
+
+.traco{
+  width: 350px;
+  height: 0px;
+  margin-top: 25px;
+  // border: 3px solid rgb(12, 12, 51);
+  border: 3px solid rgb(43, 182, 247);
+  transform: rotate(90deg);
+}
+
+.sign{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.sign h3 {
+  font-family: 'high-speed';
+  // color: rgb(12, 12, 51);
+  color: rgb(224, 224, 224);
+  margin: 10px;
+  font-size: 30px;
+
+}
+
+.sign input{
+  font-size: 20px;
+  margin: 10px;
+  font-family: 'high-speed';
+}
+
+input.invalid{
+  border: 3px solid red;
+}
+
+small{
+  color: white;
+  font-family: 'high-speed';
+  margin: 10px;
+}
+
+.sign a{
+  text-decoration: none;
+  color: white;
+  font-family: 'high-speed';
+  margin: 10px;
+}
+
+.sign button{
+  text-decoration: none;
+  // color: rgb(224, 224, 224);
+  background-color: rgb(63, 145, 189);
+  // color: rgb(12, 12, 51);
+  font-family: 'high-speed';
+  margin: 10px;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.sign button:hover{
+  cursor: pointer;
+}

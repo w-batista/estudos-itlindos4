@@ -1,0 +1,90 @@
+<table class="tabela">
+
+  <thead>
+    <tr>
+      <th>
+        ID
+      </th>
+      <th>
+        Produto
+      </th>
+      <th>
+        Valor
+      </th>
+      <th>
+        Estoque
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of produtos">
+      <td>
+        {{prod.id}}
+      </td>
+      <td>
+        {{prod.nomeProduto}}
+      </td>
+      <td>
+        {{prod.precoProduto}}
+      </td>
+      <td>
+        {{prod.estoqueProduto}}
+      </td>
+      <td>
+        <button type="button" (click)="selecionarEdicao(prod.id)" class="btn-edit">
+          Editar Produto
+        </button>
+      </td>
+
+      <td>
+        <button type="button" (click)="deletProduto(prod.id)" class="btn-delete">
+          Deletar Produto
+        </button>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+
+<div class="classForms">
+  <h2>
+    Novo Produto
+  </h2>
+
+  <div class="contInputs">
+    <label for="" class="name">Nome do Produto</label>
+    <input type="text" placeholder="Digite aqui..." [(ngModel)]="produtoCriado.nomeProduto">
+  </div>
+
+  <div class="contInputs">
+    <label for="" class="preco">Preço do Produto</label>
+    <input type="number" placeholder="Digite aqui..." [(ngModel)]="produtoCriado.precoProduto">
+  </div>
+
+  <div class="contInputs">
+    <label for="" class="estoque">Estoque do Produto</label>
+    <input type="number" placeholder="Digite aqui..." [(ngModel)]="produtoCriado.estoqueProduto">
+  </div>
+
+  <div class="button">
+    <button type="button" (click)="validateProduto()" class="btn-insere">
+      Inserir Produto
+    </button>
+  </div>
+</div>
+
+
+
+<!--
+  Valide todos os campos ao apertar o botão
+  Preco tem que ser maior que zero e ser um número
+  Estoque precisa ser um número inteiro
+-->
+
+<!--
+  Insira um botão para editar o produto na linha de cada um dos produtos
+  que ao clicar preenche os campos da parte baixo com as informações do item clicado
+  e ao salvar ele edita o item após validar
+  Insira outro botão para deletar o produto selecionado ao ser clicado
+  -->
+

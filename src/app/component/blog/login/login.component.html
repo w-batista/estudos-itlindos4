@@ -1,0 +1,32 @@
+<section>
+  <div class="title">
+    <h3>Fast and Furious</h3>
+    <h4>Join us and make your best</h4>
+  </div>
+  <div class="traco"></div>
+
+  <form [formGroup]="formPost">
+    <div class="sign">
+      <h3>Sign In</h3>
+
+      <input type="text" class="username" placeholder="Username" formControlName="username"
+        [ngClass]="{ 'invalid': (formPost.controls['username'].status == 'INVALID' && formPost.controls['username'].touched)}" />
+      <small *ngIf="formPost.controls['username'].status == 'INVALID' && formPost.controls['username'].touched">Campo
+        Inválido</small>
+      <input type="password" class="password" placeholder="Password" formControlName="password"
+        [ngClass]="{ 'invalid': (formPost.controls['password'].status == 'INVALID' && formPost.controls['username'].touched)}" />
+      <small *ngIf="formPost.controls['password'].status == 'INVALID' && formPost.controls['password'].touched">Campo
+        Inválido</small>
+
+      <a href="blog/register">Forgot Password?</a>
+      <a href="blog/register">Create New Account</a>
+      <button [disabled]="formPost.status === 'INVALID'" type="button" (click)="acessarLogin()" class="btn">
+        LOGIN
+      </button>
+
+    </div>
+  </form>
+
+  <!-- <i class="bi bi-arrow-right-square-fill"></i> -->
+
+</section>
