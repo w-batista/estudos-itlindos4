@@ -128,7 +128,7 @@ export class ListaComponent {
     })
   }
 
-  // getValue(nome: [key: string], row: Departamento) : string {
-  //   return row[nome]
-  // }
+  getValue(nome: string, row: any) : any {
+    return row[nome]
+  }
 }

@@ -1,171 +1,60 @@
-<ng-container *ngIf="rotaAtiva.url.includes('/departamentos')">
-  <section class="box">
-    <table>
-      <thead>
-        <tr>
-          <ng-container *ngFor="let col of cols">
-            <th>
-              {{ col.descricao }}
-            </th>
+<section class="box">
+  <table>
+    <thead>
+      <tr>
+        <ng-container *ngFor="let col of cols">
+          <th>
+            {{ col.descricao }}
+          </th>
 
-          </ng-container>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let p of dados">
-          <td>
-            {{p.id}}
+        </ng-container>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of dados">
+        <ng-container *ngFor="let c of cols">
+          <td *ngIf="c.tipo === 'texto'">
+            {{  getValue(c.nome, p) }}
           </td>
-          <td>
-            {{p.departamento}}
+          <td *ngIf="c.tipo === 'imagem'">
+            <img width="28px" [src]="getValue(c.nome, p)" alt="Imagem">
           </td>
-          <td>
-            <button type="button" (click)="editDep(p)" class="btn-edit">
-              Editar Departamento
-            </button>
-          </td>
-          <td>
-            <button type="button" (click)="deletDep(p.id)" class="btn-delete">
-              Deletar Departamento
-            </button>
-          </td>
-          <td>
-            <button type="button" routerLink="/produtos">
-              Ir para Departamentos
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <ng-container *ngIf="open == true">
-    <form action="" [formGroup]="formDepto">
-      <section id="modal">
-        <div class="containerModal">
-          <div class="txt">
-            <h3>
-              Departamento
-            </h3>
-            <span class="close" (click)="closeModal()">&times;</span>
-          </div>
-          <div class="caixa">
-            <input type="text" formControlName="departament" placeholder="Digite o departamento"
-              [(ngModel)]="depto.departamento"
-              [ngClass]="{'invalid': (formDepto.controls['departament'].status == 'INVALID' && formDepto.controls['departament'].touched)}">
-            <small style="color: red" *ngIf="formDepto.status === 'INVALID'">Campo Inválido</small>
-            <div class="btns">
-              <button class="btn-edit" (click)="editaDepartamento(depto)">Atualizar</button>
-              <button class="btn-insere">Adiconar</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </form>
-  </ng-container>
-</ng-container>
-<!-- <ng-container *ngIf="rotaAtiva.url.includes('/produtos')">
-  <section class="box">
-    <table>
-      <thead>
-        <tr>
-          <th>
-            ID
-          </th>
-          <th>
-            Nome
-          </th>
-          <th>
-            Preço
-          </th>
-          <th>
-            Estoque
-          </th>
-          <th>
-            Descrição
-          </th>
-          <th>
+        </ng-container>
+        <td>
+          <button type="button" (click)="editDep(p)" class="btn-edit">
+            Editar
+          </button>
+        </td>
+        <td>
+          <button type="button" (click)="deletDep(p.id)" class="btn-delete">
+            Deletar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<ng-container *ngIf="open == true">
+  <form action="" [formGroup]="formDepto">
+    <section id="modal">
+      <div class="containerModal">
+        <div class="txt">
+          <h3>
             Departamento
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let p of conteudo">
-          <td>
-            {{p.id}}
-          </td>
-          <td>
-            {{p.nome}}
-          </td>
-          <td>
-            {{p.preco}}
-          </td>
-          <td>
-            {{p.estoque}}
-          </td>
-          <td>
-            {{p.descricao}}
-          </td>
-          <td>
-            {{p.departamento}}
-          </td>
-          <td>
-            <button type="button" (click)="selecionarEdit(p.id)" class="btn-edit">
-              Editar Produto
-            </button>
-          </td>
-          <td>
-            <button type="button" (click)="selecionarDel(p.id)" class="btn-delete">
-              Deletar Produto
-            </button>
-          </td>
-          <td>
-            <button type="button" routerLink="/departamentos">
-              Voltar
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <ng-container *ngIf="open == true">
-    <form action="" [formGroup]="formPost">
-      <section id="modal">
-        <div class="containerModal">
-          <div class="txt">
-            <h3>
-              Produtos
-            </h3>
-            <span class="close" (click)="closeModal()">&times;</span>
-          </div>
-          <div class="caixa">
-            <input type="text" formControlName="nome" placeholder="Digite o nome" [(ngModel)]="pro.nome"
-              [ngClass]="{'invalid': (formPost.controls['nome'].status == 'INVALID' && formPost.controls['nome'].touched)}">
-            <small style="color: red" *ngIf="formPost.controls['nome'].status === 'INVALID'">Campo Inválido</small>
-            <input type="text" formControlName="preco" placeholder="Digite o preço" [(ngModel)]="pro.preco"
-              [ngClass]="{'invalid': (formPost.controls['preco'].status == 'INVALID' && formPost.controls['preco'].touched)}">
-            <small style="color: red" *ngIf="formPost.controls['preco'].status === 'INVALID'">Campo Inválido</small>
-            <input type="text" formControlName="estoque" placeholder="Digite o estoque" [(ngModel)]="pro.estoque"
-              [ngClass]="{'invalid': (formPost.controls['estoque'].status == 'INVALID' && formPost.controls['estoque'].touched)}">
-            <small style="color: red" *ngIf="formPost.controls['estoque'].status === 'INVALID'">Campo Inválido</small>
-            <input type="text" formControlName="depto" placeholder="Digite o departamento"
-              [(ngModel)]="pro.departamento"
-              [ngClass]="{'invalid': (formPost.controls['depto'].status == 'INVALID' && formPost.controls['depto'].touched)}">
-            <small style="color: red" *ngIf="formPost.controls['depto'].status === 'INVALID'">Campo Inválido</small>
-            <textarea type="text" formControlName="descricao" placeholder="Digite a descrição"
-              [(ngModel)]="pro.descricao"
-              [ngClass]="{'invalid': (formPost.controls['descricao'].status == 'INVALID' && formPost.controls['descricao'].touched)}"> </textarea>
-            <small style="color: red" *ngIf="formPost.controls['descricao'].status === 'INVALID'">Campo Inválido</small>
-            <div class="btns">
-              <button class="btn-edit" (click)="editaProd(pro)">
-                Atualizar
-              </button>
-              <button class="btn-insere" (click)="criarPost()">
-                Adiconar
-              </button>
-            </div>
+          </h3>
+          <span class="close" (click)="closeModal()">&times;</span>
+        </div>
+        <div class="caixa">
+          <input type="text" formControlName="departament" placeholder="Digite o departamento"
+            [(ngModel)]="depto.departamento"
+            [ngClass]="{'invalid': (formDepto.controls['departament'].status == 'INVALID' && formDepto.controls['departament'].touched)}">
+          <small style="color: red" *ngIf="formDepto.status === 'INVALID'">Campo Inválido</small>
+          <div class="btns">
+            <button class="btn-edit" (click)="editaDepartamento(depto)">Atualizar</button>
+            <button class="btn-insere">Adiconar</button>
           </div>
         </div>
-      </section>
-    </form>
-  </ng-container>
-</ng-container> -->
+      </div>
+    </section>
+  </form>
+</ng-container>

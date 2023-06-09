@@ -3,4 +3,9 @@
     PRODUTOS
   </h2>
 </section>
-<app-lista [dados]="prod"></app-lista>
+<app-lista
+    [cols]="cols"
+    [dados]="produtos"
+    (onDelete)="onDeleteProd($event)"
+    (onEdit)="onEditProd($event)"
+></app-lista>
