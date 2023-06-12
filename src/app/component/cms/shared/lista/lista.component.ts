@@ -42,22 +42,11 @@ export class ListaComponent {
      imagem: '',
      id: 0
   }
-  formPost: FormGroup
-  formDepto: FormGroup
+
   constructor(
     private apiUrl: CmsService,
     public rotaAtiva: Router
     ){
-      this.formDepto = new FormGroup({
-        departament: new FormControl('', [Validators.required, Validators.minLength(5)])
-      })
-      this.formPost = new FormGroup({
-        nome: new FormControl('', [Validators.required, Validators.minLength(4)]),
-        preco: new FormControl('', [Validators.required, Validators.minLength(2)]),
-        estoque: new FormControl('', [Validators.required, Validators.minLength(1)]),
-        depto: new FormControl('', [Validators.required, Validators.minLength(5)]),
-        descricao: new FormControl('', [Validators.required, Validators.minLength(20)]),
-      })
     }
 
     ngOnInit(){
@@ -75,21 +64,7 @@ export class ListaComponent {
       this.open = false
     }
 
-    criarPost(): void{
-      let enviarPost: Produtos = {
-        id: this.formPost.value.id,
-        nome: this.formPost.value.nome,
-        preco: this.formPost.value.preco,
-        estoque: this.formPost.value.estoque,
-        departamento: this.formPost.value.departamento,
-        descricao: this.formPost.value.descricao,
-        imagem: this.formPost.value.imagem
-      }
-      let novoPost = this.apiUrl
-      this.apiUrl.insereNovoProduto(enviarPost).subscribe((data) => {
-        alert ('Produto inserido')
-      })
-    }
+
 
   getProduto(): void {
     this.apiUrl.getAllProduto().subscribe((data) => {

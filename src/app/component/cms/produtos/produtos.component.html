@@ -2,6 +2,7 @@
   <h2 style="font-family: 'high-speed'; text-align: center; margin-top: 40px ;">
     PRODUTOS
   </h2>
+  <button class="btn-insere" (click)="novoProduto()">Novo Produto</button>
 </section>
 <app-lista
     [cols]="cols"
@@ -9,3 +10,45 @@
     (onDelete)="onDeleteProd($event)"
     (onEdit)="onEditProd($event)"
 ></app-lista>
+
+  <ng-container *ngIf="open == true">
+    <form action="" [formGroup]="formProd">
+      <section id="modal">
+        <div class="containerModal">
+          <div class="txt">
+            <h3>
+              Produtos
+            </h3>
+            <span class="close" (click)="closeModal()">&times;</span>
+          </div>
+          <div class="caixa">
+            <input type="text" formControlName="nome" placeholder="Digite o nome"
+              [ngClass]="{'invalid': (formProd.controls['nome'].status == 'INVALID' && formProd.controls['nome'].touched)}">
+            <small style="color: red" *ngIf="formProd.controls['nome'].status === 'INVALID'">Campo Inválido</small>
+            <input type="text" formControlName="preco" placeholder="Digite o preço"
+              [ngClass]="{'invalid': (formProd.controls['preco'].status == 'INVALID' && formProd.controls['preco'].touched)}">
+            <small style="color: red" *ngIf="formProd.controls['preco'].status === 'INVALID'">Campo Inválido</small>
+            <input type="text" formControlName="estoque" placeholder="Digite o estoque"
+              [ngClass]="{'invalid': (formProd.controls['estoque'].status == 'INVALID' && formProd.controls['estoque'].touched)}">
+            <small style="color: red" *ngIf="formProd.controls['estoque'].status === 'INVALID'">Campo Inválido</small>
+            <input type="text" formControlName="depto" placeholder="Digite o departamento"
+              [ngClass]="{'invalid': (formProd.controls['depto'].status == 'INVALID' && formProd.controls['depto'].touched)}">
+            <small style="color: red" *ngIf="formProd.controls['depto'].status === 'INVALID'">Campo Inválido</small>
+            <ng-container *ngIf="!isEdit">
+              <input type="text" formControlName="imagem" placeholder="Digite o url da imagem"
+                [ngClass]="{'invalid': (formProd.controls['imagem'].status == 'INVALID' && formProd.controls['imagem'].touched)}">
+              <small style="color: red" *ngIf="formProd.controls['depto'].status === 'INVALID'">Campo Inválido</small>
+            </ng-container>
+            <textarea type="text" formControlName="descricao" placeholder="Digite a descrição"
+              [ngClass]="{'invalid': (formProd.controls['descricao'].status == 'INVALID' && formProd.controls['descricao'].touched)}"> </textarea>
+            <small style="color: red" *ngIf="formProd.controls['descricao'].status === 'INVALID'">Campo Inválido</small>
+            <div class="btns">
+              <button class="btn-insere" (click)="salvarProd()">
+                {{isEdit ? 'Atualizar': 'Salvar'}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+  </ng-container>
