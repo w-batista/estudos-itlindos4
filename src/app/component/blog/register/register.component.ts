@@ -29,6 +29,8 @@ export class RegisterComponent {
   user: Usuarios = {
     username: '',
     pfp: '',
+    login: '',
+    senha: '',
     resumo: '',
     postagens: [],
     id: 0
@@ -65,6 +67,8 @@ export class RegisterComponent {
       username: this.formPost.value.username,
       pfp: this.formPost.value.pfp,
       resumo: this.formPost.value.resumo,
+      login: '',
+      senha: '',
       postagens: [],
       id: 0
     }

@@ -21,6 +21,8 @@ export class PerfilComponent implements OnInit {
   user: Usuarios = {
     username: '',
     pfp: '',
+    login: '',
+    senha: '',
     resumo: '',
     postagens: [],
     id: 0

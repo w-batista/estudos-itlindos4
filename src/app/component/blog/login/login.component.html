@@ -9,17 +9,17 @@
     <div class="sign">
       <h3>Sign In</h3>
 
-      <input type="text" class="username" placeholder="Username" formControlName="username"
-        [ngClass]="{ 'invalid': (formPost.controls['username'].status == 'INVALID' && formPost.controls['username'].touched)}" />
-      <small *ngIf="formPost.controls['username'].status == 'INVALID' && formPost.controls['username'].touched">Campo
+      <input type="text" class="username" placeholder="Username" formControlName="login"
+        [ngClass]="{ 'invalid': (formPost.controls['login'].status == 'INVALID' && formPost.controls['login'].touched)}" />
+      <small *ngIf="formPost.controls['login'].status == 'INVALID' && formPost.controls['login'].touched">Campo
         Inválido</small>
-      <input type="password" class="password" placeholder="Password" formControlName="password"
-        [ngClass]="{ 'invalid': (formPost.controls['password'].status == 'INVALID' && formPost.controls['username'].touched)}" />
-      <small *ngIf="formPost.controls['password'].status == 'INVALID' && formPost.controls['password'].touched">Campo
+      <input type="password" class="password" placeholder="Password" formControlName="senha"
+        [ngClass]="{ 'invalid': (formPost.controls['senha'].status == 'INVALID' && formPost.controls['senha'].touched)}" />
+      <small *ngIf="formPost.controls['senha'].status == 'INVALID' && formPost.controls['senha'].touched">Campo
         Inválido</small>
 
-      <a href="blog/register">Forgot Password?</a>
-      <a href="blog/register">Create New Account</a>
+      <a style="color: black;" href="blog/register">Forgot Password?</a>
+      <a style="color: black;" href="blog/register">Create New Account</a>
       <button [disabled]="formPost.status === 'INVALID'" type="button" (click)="acessarLogin()" class="btn">
         LOGIN
       </button>

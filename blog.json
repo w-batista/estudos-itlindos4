@@ -134,6 +134,8 @@
   "usuarios": [
     {
       "username": "Brian O'Conner",
+      "login": "b_conner",
+      "senha": "123456",
       "pfp": "https://i0.wp.com/velozesclub.com.br/wp-content/uploads/2022/09/29.jpg?resize=1000%2C600&ssl=1",
       "resumo": "Dono do asfalto, dono do drift, principe das ruas!! MELHOR DO MUNDO, RESPEITA O HOMI",
       "postagens": [
@@ -147,6 +149,8 @@
     },
     {
       "username": "Dominic Toretto",
+      "login": "d_toretto",
+      "senha": "123asd",
       "pfp": "https://ovicio.com.br/wp-content/uploads/2022/12/20221227-vin-diesel-teases-that-fast-and-furious-10-could-be-split-into-two-parts-social-555x555.jpg",
       "resumo": "Dono do asfalto, dono do drift, rei das ruas!! RESPEITA O HOMI",
       "postagens": [
@@ -160,17 +164,12 @@
     },
     {
       "username": "Roman Pierce",
+      "login": "r_pierce",
+      "senha": "123qwe",
       "pfp": "",
       "resumo": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
       "postagens": [],
       "id": 3
-    },
-    {
-      "username": "kkkkkkkkkkkkkkkk",
-      "pfp": "",
-      "resumo": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
-      "postagens": [],
-      "id": 4
     }
   ]
 }

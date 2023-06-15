@@ -19,6 +19,8 @@ export class LoginComponent {
     username: '',
     pfp: '',
     resumo: '',
+    login: '',
+    senha: '',
     postagens: [],
     id: 0
   };
@@ -36,27 +38,70 @@ export class LoginComponent {
   constructor(private apiBlog: BlogService
   ) {
     this.formPost = new FormGroup({
-      username: new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(12)]),
-      password: new FormControl('', [Validators.required, Validators.minLength(8)]),
-      pfp: new FormControl(''),
-      resumo: new FormControl(''),
-      id: new FormControl(),
-
+      login: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(12)]),
+      senha: new FormControl('', [Validators.required, Validators.minLength(6)])
     })
   }
 
   acessarLogin(): void {
-    console.log(this.formPost)
-    let entrarLogin: Usuarios = {
-      username: this.formPost.value.username,
-      pfp: '',
-      resumo: '',
-      postagens: [],
-      id: 0
+    
+    const entrarLogin = {
+      login: this.formPost.value.login,
+      senha: this.formPost.value.senha
     }
+    let usuarios: Usuarios[] = []
+
     this.apiBlog.getAllUsuarios().subscribe((data) => {
-      return ''
+      usuarios = data
     })
-  }
+
+    setTimeout(() => {
+      console.log('usuários',usuarios)
+
+      //let logado = false
+      console.log('valores', entrarLogin)
+
+      /*for (let index = 0; index < usuarios.length; index++) {
+
+        const usuario = usuarios[index];
+
+        if(usuario.login === entrarLogin.login && usuario.senha === entrarLogin.senha){
+          console.log('passei no IF')
+          logado = true
+          break;
+        }
+        else {
+          logado = false
+        }
+        
+      }
+      
+      console.log('logado', logado)*/
+
+      const test = (user: Usuarios)=> {
+        return user.login == entrarLogin.login && user.senha == entrarLogin.senha;
+      }
+
+      const usuario = usuarios.find(((user)=> {
+        return user.login == entrarLogin.login && user.senha == entrarLogin.senha;
+      }))
+
+      if(usuario){
+        localStorage.setItem('user', JSON.stringify(usuario))
+
+        const user = JSON.parse(localStorage.getItem('user') as string)
+
+        console.log('usuario localstorage',user)
+      }
+      else{
+        console.error('Usuário ou senha inválido!')
+      }
+
+      //console.log('logado', logado)
+
+    }, 3000);
+  } 
+
+
 
 }
