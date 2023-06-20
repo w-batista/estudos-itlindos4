@@ -4,6 +4,7 @@ import { UsuariosService } from '../service/usuarios.service';
 import { Usuarios } from '../model/usuarios';
 import { Blog } from '../model/blog';
 import { BlogService } from '../service/blog.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -35,7 +36,9 @@ export class LoginComponent {
     id: 0
   };
 
-  constructor(private apiBlog: BlogService
+  constructor(
+    private apiBlog: BlogService,
+    private router: Router
   ) {
     this.formPost = new FormGroup({
       login: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(12)]),
@@ -89,14 +92,15 @@ export class LoginComponent {
       if(usuario){
         localStorage.setItem('user', JSON.stringify(usuario))
 
-        const user = JSON.parse(localStorage.getItem('user') as string)
+        this.router.navigate(['/blog/home'])
+        // const user = JSON.parse(localStorage.getItem('user') as string)
 
-        console.log('usuario localstorage',user)
+        // console.log('usuario localstorage',user)
       }
       else{
         console.error('Usuário ou senha inválido!')
       }
-
+      
       //console.log('logado', logado)
 
     }, 3000);

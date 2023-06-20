@@ -2,6 +2,9 @@
   <h1>
     Fast and Furious
   </h1>
+  
+  {{usuarioLogado ? 'Bem-vindo ' + usuarioLogado?.username : '' }}
+
   <button type="button" class="btn" routerLink="/blog/criar">
     New post
   </button>

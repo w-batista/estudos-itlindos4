@@ -11,6 +11,7 @@ import { RegisterComponent } from './component/blog/register/register.component'
 import { DepartamentosComponent } from './component/cms/departamentos/departamentos.component';
 import { ProdutosComponent } from './component/cms/produtos/produtos.component';
 import { ListaComponent } from './component/cms/shared/lista/lista.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   // Cada Cada objeto tem as propriedade de path para o caminho e
@@ -18,9 +19,8 @@ const routes: Routes = [
   // {path: 'menu-lateral', component: MenuLateralComponent},
   {path: 'crud', component: CrudComponent},
   {path: 'departamentos', component: DepartamentosComponent},
-  {path: 'produtos', component: ProdutosComponent},
   {path: 'lista', component: ListaComponent},
-  {path: 'blog/home', component: BlogHomeComponent},
+  {path: 'blog/home', component: BlogHomeComponent, canActivate: [AuthGuard]},
   {path: 'blog/interna/:id', component: BlogInternaComponent},
   {path: 'blog/criar', component: CriarPostComponent},
   {path: 'blog/perfil/:id', component: PerfilComponent},

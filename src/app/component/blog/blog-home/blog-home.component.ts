@@ -16,13 +16,14 @@ export class BlogHomeComponent implements OnInit {
 
   usuarios: Usuarios[] = [];
 
-
+  usuarioLogado: Usuarios = {} as Usuarios;
   constructor(private apiBlog: BlogService) { }
 
 
 
   ngOnInit(): void {
     this.pegarInfos();
+    this.usuarioLogado = JSON.parse(localStorage.getItem('user') as string);
   }
 
   pegarInfos(): void {

@@ -1,4 +1,4 @@
-<section>
+<section style="background-color: #222;">
 
   <div class="title">
     <h3>Fast and Furious</h3>
@@ -19,6 +19,22 @@
         [ngClass]="{ 'invalid': (formPost.controls['password'].status == 'INVALID' && formPost.controls['password'].touched)}" />
       <small *ngIf="formPost.controls['password'].status == 'INVALID' && formPost.controls['password'].touched">Senha
         Inválida</small>
+
+      <p>
+        Confirme a senha:
+      </p>
+      <input type="password" class="password" placeholder="Confirm Password" formControlName="confirmPassword"
+        [ngClass]="{ 'invalid': (formPost.controls['confirmPassword'].status == 'INVALID' && formPost.controls['confirmPassword'].touched) || (formPost.errors && formPost.controls['confirmPassword'].touched)}" />
+        <ng-container *ngIf="formPost.controls['confirmPassword']?.errors">
+
+          <small *ngIf="formPost.controls['confirmPassword'].errors['required'] && formPost.controls['confirmPassword'].touched">A confirmação de senha é obrigatória
+            </small>
+        </ng-container>
+
+        <ng-container *ngIf="formPost.errors">
+          <small *ngIf="formPost?.errors['passwordInvalido'] && formPost.controls['confirmPassword'].touched">As senhas
+            não conferem</small>
+        </ng-container>
 
       <p>
         Insira sua foto de perfil:
