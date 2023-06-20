@@ -47,6 +47,7 @@ export class RegisterComponent {
     this.formPost = new FormGroup({
       username: new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(25)]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      login: new FormControl('', [Validators.required]),
       confirmPassword: new FormControl('', [Validators.required]),
       resumo: new FormControl('', [Validators.required, Validators.minLength(30), Validators.maxLength(400)]),
       pfp: new FormControl('')
@@ -79,11 +80,12 @@ export class RegisterComponent {
       username: this.formPost.value.username,
       pfp: this.formPost.value.pfp,
       resumo: this.formPost.value.resumo,
-      login: '',
-      senha: '',
+      login: this.formPost.value.login,
+      senha: this.formPost.value.password,
       postagens: [],
       id: 0
     }
+    console.log('Novo usuário', novoUsuario)
     for( let user of this.users){
       if( user.login === this.formPost.value.login){
         alert( 'Username já cadastado' )
@@ -91,6 +93,7 @@ export class RegisterComponent {
       }
     }
     this.apiUsuarios.postNovoUser(novoUsuario).subscribe((data)=> {
+      console.log(data)
       alert ('User cadastrado')
     })
   }

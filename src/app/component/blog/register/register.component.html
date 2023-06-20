@@ -12,6 +12,12 @@
       <small *ngIf="formPost.controls['username'].status == 'INVALID' && formPost.controls['username'].touched">Usuário
         Inválido</small>
 
+      <p>Crie um Login:</p>
+      <input type="text" class="username" placeholder="Login" formControlName="login"
+        [ngClass]="{'invalid': (formPost.controls['login'].status == 'INVALID' && formPost.controls['login'].touched)}" />
+      <small *ngIf="formPost.controls['login'].status == 'INVALID' && formPost.controls['login'].touched">login
+        Inválido</small>
+
       <p>
         Crie uma senha:
       </p>
@@ -39,7 +45,7 @@
       <p>
         Insira sua foto de perfil:
       </p>
-      <input type="url" class="image" placeholder="Insira o link da imagem">
+      <input type="url" class="image" formControlName="pfp" placeholder="Insira o link da imagem">
 
 
       <p>Nos conte sobre você:</p>
