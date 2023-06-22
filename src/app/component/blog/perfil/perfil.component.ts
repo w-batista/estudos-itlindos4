@@ -63,9 +63,7 @@ export class PerfilComponent implements OnInit {
       
       const user = JSON.parse(localStorage.getItem('user') as string) as Usuarios;
 
-      if(user){
-        this.idDoAutor = user.id
-      }      
+      this.idDoAutor = user.id 
     }
 
     this.pegarInfos();

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Blog } from '../model/blog';
 import { BlogService } from '../service/blog.service';
+import { Usuarios } from '../model/usuarios';
 
 @Component({
   selector: 'app-criar-post',
@@ -42,13 +43,21 @@ export class CriarPostComponent {
       titulo: this.formPost.value.titulo,
       texto: this.formPost.value.texto,
       imagem: this.formPost.value.imagem,
-      autor: 1,
+      autor: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user') as string)?.id : 0,
       comentarios: [],
       id: 0,
       data: this.pegaAgoraISO()
     }
     let novoPost = this.apiBlog
     this.apiBlog.insereNovoPost(postParaEnviar).subscribe ((data) => {
+      const dadosDoNovoPost = data
+
+      let usuarioAlterado = JSON.parse(localStorage.getItem('user') as string) as Usuarios
+
+      usuarioAlterado.postagens.push(dadosDoNovoPost.id);
+
+      this.apiBlog.putUsuarioPorid(usuarioAlterado).subscribe();
+      
       alert ('Postagem criada!')
     })
   }

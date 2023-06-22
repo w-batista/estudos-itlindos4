@@ -41,4 +41,8 @@ export class BlogService {
   getUsuarioPorId(id: number): Observable<Usuarios>{
     return this.http.get<Usuarios>(this.apiUrl + 'usuarios/' + id)
   }
+
+  putUsuarioPorid(usuario: Usuarios): Observable<Usuarios> {
+    return this.http.put<Usuarios>(this.apiUrl + 'usuarios/' + usuario.id, usuario)
+  }
 }
