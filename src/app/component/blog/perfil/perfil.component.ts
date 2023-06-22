@@ -57,9 +57,20 @@ export class PerfilComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
     this.idDoAutor = (this.rotaAtiva.snapshot.params['id'])
+    if(!this.idDoAutor){
+      
+      const user = JSON.parse(localStorage.getItem('user') as string) as Usuarios;
+
+      if(user){
+        this.idDoAutor = user.id
+      }      
+    }
+
     this.pegarInfos();
     this.showPost();
+
 
   }
 
@@ -71,12 +82,50 @@ export class PerfilComponent implements OnInit {
 
   showPost(): void {
     this.apiBlog.getAllBlog().subscribe((data) => {
-      for (let pub of data) {
-        if (pub.autor == this.idDoAutor) {
-          this.blog.push(pub)
 
-        }
-      }
+      this.blog = data.map(post => {
+         if(post.autor == this.idDoAutor){
+          return post
+         }
+         return false;
+
+      }).filter(Boolean) as Blog[];
+
+
+
+      // for (let pub of data) {
+      //   this.blog = [];
+      //   if (pub.autor == this.idDoAutor) {
+      //     this.blog.push(pub)
+      //     console.log('postagens', this.blog)
+
+      //   }
+      // }
+
+      // const perfil = {
+      //   username: "Brian O'Conner",
+      //   login: "b_conner",
+      //   senha: "123456",
+      //   pfp: "https://i0.wp.com/velozesclub.com.br/wp-content/uploads/2022/09/29.jpg?resize=1000%2C600&ssl=1",
+      //   resumo: "Dono do asfalto, dono do drift, principe das ruas!! MELHOR DO MUNDO, RESPEITA O HOMI",
+      //   postagens: [
+      //     1,
+      //     3,
+      //     5,
+      //     7,
+      //     9
+      //   ],
+      //   id: 1
+      // }
+
+      // const todasAsPostagens = data
+
+      // this.blog = todasAsPostagens.filter( post => {
+      //   return perfil.postagens.some(id => id === post.id);
+      // })
+
+
+
     })
   }
   // getAllUser(): void{

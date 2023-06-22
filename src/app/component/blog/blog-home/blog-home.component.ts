@@ -11,6 +11,11 @@ import { BlogService } from '../service/blog.service';
 })
 export class BlogHomeComponent implements OnInit {
 
+  pessoa= {
+    nome: 'will batista',
+    dataNasc: new Date('1987-10-01'),
+    cpf: '33333333333'
+  }
 
   blog: Blog[] = [];
 

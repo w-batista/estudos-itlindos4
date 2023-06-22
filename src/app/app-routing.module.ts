@@ -23,7 +23,8 @@ const routes: Routes = [
   {path: 'blog/home', component: BlogHomeComponent, canActivate: [AuthGuard]},
   {path: 'blog/interna/:id', component: BlogInternaComponent},
   {path: 'blog/criar', component: CriarPostComponent},
-  {path: 'blog/perfil/:id', component: PerfilComponent},
+  {path: 'blog/perfil', component: PerfilComponent, canActivate: [AuthGuard]},
+  {path: 'blog/perfil/:id', component: PerfilComponent, canActivate: [AuthGuard]},
   {path: 'blog/login', component: LoginComponent},
   {path: 'blog/register', component: RegisterComponent}
 ];

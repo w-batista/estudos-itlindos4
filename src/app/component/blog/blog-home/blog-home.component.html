@@ -5,6 +5,9 @@
   
   {{usuarioLogado ? 'Bem-vindo ' + usuarioLogado?.username : '' }}
 
+  <p>{{ pessoa.dataNasc | date : 'dd-MM-yyyy'}}</p>
+  <p>{{ pessoa.nome | lowercase }}</p>
+
   <button type="button" class="btn" routerLink="/blog/criar">
     New post
   </button>
