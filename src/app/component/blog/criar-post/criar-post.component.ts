@@ -48,7 +48,7 @@ export class CriarPostComponent {
       id: 0,
       data: this.pegaAgoraISO()
     }
-    let novoPost = this.apiBlog
+    
     this.apiBlog.insereNovoPost(postParaEnviar).subscribe ((data) => {
       const dadosDoNovoPost = data
 
@@ -57,7 +57,7 @@ export class CriarPostComponent {
       usuarioAlterado.postagens.push(dadosDoNovoPost.id);
 
       this.apiBlog.putUsuarioPorid(usuarioAlterado).subscribe();
-      
+
       alert ('Postagem criada!')
     })
   }

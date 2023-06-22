@@ -22,6 +22,8 @@ import { RegisterComponent } from './component/blog/register/register.component'
 import { DepartamentosComponent } from './component/cms/departamentos/departamentos.component';
 import { ProdutosComponent } from './component/cms/produtos/produtos.component';
 import { ListaComponent } from './component/cms/shared/lista/lista.component';
+import { DiretivaDirective } from './component/diretivas/diretiva.directive';
+import { DiretivaComponent } from './component/diretivas/diretiva/diretiva.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { ListaComponent } from './component/cms/shared/lista/lista.component';
     // CmsComponent,
     DepartamentosComponent,
     ProdutosComponent,
-    ListaComponent
+    ListaComponent,
+    DiretivaDirective,
+    DiretivaComponent
   ],
   imports: [
     BrowserModule,

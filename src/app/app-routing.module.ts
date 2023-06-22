@@ -12,6 +12,7 @@ import { DepartamentosComponent } from './component/cms/departamentos/departamen
 import { ProdutosComponent } from './component/cms/produtos/produtos.component';
 import { ListaComponent } from './component/cms/shared/lista/lista.component';
 import { AuthGuard } from './auth.guard';
+import { DiretivaComponent } from './component/diretivas/diretiva/diretiva.component';
 
 const routes: Routes = [
   // Cada Cada objeto tem as propriedade de path para o caminho e
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'blog/perfil', component: PerfilComponent, canActivate: [AuthGuard]},
   {path: 'blog/perfil/:id', component: PerfilComponent, canActivate: [AuthGuard]},
   {path: 'blog/login', component: LoginComponent},
-  {path: 'blog/register', component: RegisterComponent}
+  {path: 'blog/register', component: RegisterComponent},
+  {path: 'diretiva', component: DiretivaComponent}
 ];
 
 
