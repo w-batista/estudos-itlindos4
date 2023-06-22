@@ -8,23 +8,19 @@ export class DiretivaDirective implements OnInit {
 
 
   @HostBinding('style.backgroundColor') corFundo: string = 'red'
+  @HostBinding('style.fontFamily') fontFamily : string = '200px'
   @HostBinding('disabled') disabled: boolean = true
 
-  @HostListener('click', ['$event.target']) 
-    clickDiv(evento: any){
+  @HostListener('click', ['$event.target']) clickDiv(evento: any){
       const elem = this.elemento.nativeElement as HTMLDivElement;
 
       elem.classList.remove('active');
+
+      this.adicionarDivFilho()
     }
+ 
 
-  @HostListener('mouseover') passarOMouse() {
-    this.corFundo = 'black'
-  }
-
-  @HostListener('mouseout') tirarOMouse() {
-    this.corFundo = 'white'
-  }
-
+  
   constructor(private elemento: ElementRef) { }
 
 
@@ -42,6 +38,24 @@ export class DiretivaDirective implements OnInit {
     }, 2000);
   }
 
+  adicionarDivFilho(){
+    //Elemento com a diretiva - No caso a DIV
+    const elemDiv = this.elemento.nativeElement as HTMLDivElement;
+
+    //Cria um novo elemento DIV
+    const divNova = document.createElement('div') as HTMLDivElement
+
+    //Adiciona o elemento novo DIV
+    elemDiv.append(divNova)
+  }
+
+  @HostListener('mouseover') passarOMouse() {
+    this.corFundo = 'black'
+  }
+
+  @HostListener('mouseout') tirarOMouse() {
+    this.corFundo = 'white'
+  }
 
 
 }
